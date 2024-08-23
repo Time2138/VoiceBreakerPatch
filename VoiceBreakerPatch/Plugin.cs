@@ -4,27 +4,32 @@ using HarmonyLib;
 
 namespace VoiceBreakerPatch;
 
-public class Plugin : Plugin<Config>
+public class Plugin : Plugin<Config, Translation>
 {
     public override string Prefix => "VoiceBreakerPatch";
     public override string Name => Prefix;
-    public override string Author => "BanalnyBanan";
-    public override Version Version { get; } = new (1, 0, 0);
+    public override string Author => "Timersky";
+    public override Version Version => new(1, 0, 0);
     
-    static readonly Harmony Harmony = new ("VoiceBreakerPatch");
     public static Plugin Instance;
+    
+    static readonly Harmony Patch = new("VoiceBreakerPatch");
 
     public override void OnEnabled()
     {
         Instance = this;
-        Harmony.PatchAll();
+        
+        Patch.PatchAll();
+        
         base.OnEnabled();
     }
 
     public override void OnDisabled()
     {
+        Patch.UnpatchAll();
+        
         Instance = null;
-        Harmony.UnpatchAll();
+        
         base.OnDisabled();
     }
 }

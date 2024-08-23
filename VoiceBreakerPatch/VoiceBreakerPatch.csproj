@@ -9,7 +9,7 @@
         <AppDesignerFolder>Properties</AppDesignerFolder>
         <RootNamespace>VoiceBreakerPatch</RootNamespace>
         <AssemblyName>VoiceBreakerPatch</AssemblyName>
-        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <Deterministic>true</Deterministic>
         <LangVersion>default</LangVersion>
@@ -32,111 +32,18 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="0Harmony">
-          <HintPath>..\..\..\Desktop\newLibs\0Harmony.dll</HintPath>
-        </Reference>
-        <Reference Include="Assembly-CSharp">
-          <HintPath>..\..\..\Desktop\newLibs\Assembly-CSharp.dll</HintPath>
-        </Reference>
-        <Reference Include="Assembly-CSharp-firstpass">
-          <HintPath>..\..\..\Desktop\newLibs\Assembly-CSharp-firstpass.dll</HintPath>
-        </Reference>
-        <Reference Include="CommandSystem.Core">
-          <HintPath>..\..\..\Desktop\newLibs\CommandSystem.Core.dll</HintPath>
-        </Reference>
-        <Reference Include="Exiled.API">
-          <HintPath>..\..\..\Desktop\newLibs\Exiled.API.dll</HintPath>
-        </Reference>
-        <Reference Include="Exiled.CreditTags">
-          <HintPath>..\..\..\Desktop\newLibs\Exiled.CreditTags.dll</HintPath>
-        </Reference>
-        <Reference Include="Exiled.CustomItems">
-          <HintPath>..\..\..\Desktop\newLibs\Exiled.CustomItems.dll</HintPath>
-        </Reference>
-        <Reference Include="Exiled.CustomRoles">
-          <HintPath>..\..\..\Desktop\newLibs\Exiled.CustomRoles.dll</HintPath>
-        </Reference>
-        <Reference Include="Exiled.Events">
-          <HintPath>..\..\..\Desktop\newLibs\Exiled.Events.dll</HintPath>
-        </Reference>
-        <Reference Include="Exiled.Loader">
-          <HintPath>..\..\..\Desktop\newLibs\Exiled.Loader.dll</HintPath>
-        </Reference>
-        <Reference Include="Exiled.Permissions">
-          <HintPath>..\..\..\Desktop\newLibs\Exiled.Permissions.dll</HintPath>
-        </Reference>
-        <Reference Include="MapEditorReborn">
-          <HintPath>..\..\..\Desktop\newLibs\MapEditorReborn.dll</HintPath>
-        </Reference>
-        <Reference Include="Mirror">
-          <HintPath>..\..\..\Desktop\newLibs\Mirror.dll</HintPath>
-        </Reference>
-        <Reference Include="Mono.Posix">
-          <HintPath>..\..\..\Desktop\newLibs\Mono.Posix.dll</HintPath>
-        </Reference>
-        <Reference Include="mscorlib">
-          <HintPath>..\..\..\Desktop\newLibs\mscorlib.dll</HintPath>
-        </Reference>
-        <Reference Include="NorthwoodLib">
-          <HintPath>..\..\..\Desktop\newLibs\NorthwoodLib.dll</HintPath>
-        </Reference>
-        <Reference Include="NVorbis">
-          <HintPath>..\..\..\Desktop\newLibs\NVorbis.dll</HintPath>
-        </Reference>
-        <Reference Include="PluginAPI">
-          <HintPath>..\..\..\Desktop\newLibs\PluginAPI.dll</HintPath>
-        </Reference>
-        <Reference Include="Pooling">
-          <HintPath>..\..\..\Desktop\newLibs\Pooling.dll</HintPath>
-        </Reference>
-        <Reference Include="SCPSLAudioApi">
-          <HintPath>..\..\..\Desktop\newLibs\SCPSLAudioApi.dll</HintPath>
-        </Reference>
-        <Reference Include="SemanticVersioning">
-          <HintPath>..\..\..\Desktop\newLibs\SemanticVersioning.dll</HintPath>
-        </Reference>
-        <Reference Include="System"/>
-        <Reference Include="System.ComponentModel.DataAnnotations">
-          <HintPath>..\..\..\Desktop\newLibs\System.ComponentModel.DataAnnotations.dll</HintPath>
-        </Reference>
-        <Reference Include="System.Core"/>
-        <Reference Include="System.Xml.Linq"/>
-        <Reference Include="System.Data.DataSetExtensions"/>
-        <Reference Include="System.Data"/>
-        <Reference Include="System.Net.Http"/>
-        <Reference Include="System.Xml"/>
-        <Reference Include="UnityEngine">
-          <HintPath>..\..\..\Desktop\newLibs\UnityEngine.dll</HintPath>
-        </Reference>
-        <Reference Include="UnityEngine.AIModule">
-          <HintPath>..\..\..\Desktop\newLibs\UnityEngine.AIModule.dll</HintPath>
-        </Reference>
-        <Reference Include="UnityEngine.AnimationModule">
-          <HintPath>..\..\..\Desktop\newLibs\UnityEngine.AnimationModule.dll</HintPath>
-        </Reference>
-        <Reference Include="UnityEngine.CoreModule">
-          <HintPath>..\..\..\Desktop\newLibs\UnityEngine.CoreModule.dll</HintPath>
-        </Reference>
-        <Reference Include="UnityEngine.PhysicsModule">
-          <HintPath>..\..\..\Desktop\newLibs\UnityEngine.PhysicsModule.dll</HintPath>
-        </Reference>
-        <Reference Include="UnityEngine.TerrainModule">
-          <HintPath>..\..\..\Desktop\newLibs\UnityEngine.TerrainModule.dll</HintPath>
-        </Reference>
-        <Reference Include="UnityEngine.UnityWebRequestModule">
-          <HintPath>..\..\..\Desktop\newLibs\UnityEngine.UnityWebRequestModule.dll</HintPath>
-        </Reference>
-        <Reference Include="YamlDotNet">
-          <HintPath>..\..\..\Desktop\newLibs\YamlDotNet.dll</HintPath>
-        </Reference>
-        <Reference Include="zxing.unity">
-          <HintPath>..\..\..\Desktop\newLibs\zxing.unity.dll</HintPath>
-        </Reference>
+        <Reference Include="0Harmony" HintPath="$(EXILED_REFERENCES)\0Harmony.dll" />
+        <Reference Include="Assembly-CSharp-Publicized" HintPath="$(SL_REFERENCES)\Assembly-CSharp-Publicized.dll" />
+        <Reference Include="Exiled.API" HintPath="$(EXILED_REFERENCES)\Exiled.API.dll" />
+        <Reference Include="System" />
+        <Reference Include="Mirror" HintPath="$(UNITY_REFERENCES)\Mirror.dll" />
+        <Reference Include="UnityEngine.CoreModule" HintPath="$(UNITY_REFERENCES)\UnityEngine.CoreModule.dll" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Config.cs"/>
-        <Compile Include="Patch.cs" />
+        <Compile Include="Patches\VoiceBreakerPatch.cs" />
         <Compile Include="Plugin.cs"/>
+        <Compile Include="Translation.cs" />
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Properties\"/>
