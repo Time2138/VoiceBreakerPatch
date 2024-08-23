@@ -9,7 +9,7 @@ public class Plugin : Plugin<Config, Translation>
     public override string Prefix => "VoiceBreakerPatch";
     public override string Name => Prefix;
     public override string Author => "Timersky";
-    public override Version Version => new(1, 0, 0);
+    public override Version Version => new(1, 1, 0);
     
     public static Plugin Instance;
     
